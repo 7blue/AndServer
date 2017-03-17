@@ -100,6 +100,7 @@ Wesite wesite = new AssetsWebsite(mAssetManager, youPath);
 ```
 
 * 如果你的网站在`assets`根目录下, 你的`path`就填`""`，比如：  
+
 ![web_assets.png](./image/web_assets.png)
 ```java
 Wesite wesite = new AssetsWebsite(mAssetManager, "");
@@ -119,28 +120,29 @@ http://192.168.1.12:8080/index.html
 http://192.168.1.12:8080/login.html
 ```
 
-* 如果你的网站根目录在`assets`的子目录下，那么你传入`assets`的相对目录地址就好了比如你的网站在`assets`下`/web/website`目录，例如：  
+* 如果你的网站根目录在`assets`的子目录下，那么你传入`assets`的相对目录地址就好了比如你的网站在`assets`下`web`目录，例如：  
+
 ![web_assets.png](./image/web_assets_son.png)
 ```java
-Wesite wesite = new AssetsWebsite(mAssetManager, "web/www");
+Wesite wesite = new AssetsWebsite(mAssetManager, "web");
 ```
 
 那么你的默认首页访问地址就是：  
 `http://ip:port`  
-`http://ip:port/web/www`  
-`http://ip:port/web/www/index.html`  
+`http://ip:port/web`  
+`http://ip:port/web/index.html`  
 
 那么你的其它页面访问地址是：  
-`http://ip:port/web/www/login.html`  
-`http://ip:port/web/www/error.html`  
+`http://ip:port/web/login.html`  
+`http://ip:port/web/error.html`  
 
 例如：  
 ```
 http://192.168.1.12:8080/
 http://192.168.1.12:8080/index.html
-http://192.168.1.12:8080/web/www/index.html
-http://192.168.1.12:8080/web/www/index.html  
-http://192.168.1.12:8080/web/www/login.html
+http://192.168.1.12:8080/web/index.html
+http://192.168.1.12:8080/web/index.html  
+http://192.168.1.12:8080/web/login.html
 ```
 
 ### StorageWebsite的使用
